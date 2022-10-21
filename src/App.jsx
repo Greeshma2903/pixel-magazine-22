@@ -44,19 +44,19 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="/src/assets/00 pixel 1.png" />
+          <img src={"/src/assets/00 pixel 1.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/src/assets/0 Contents.png" />
+          <img src={"/src/assets/0 Contents.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/src/assets/1.png" />
+          <img src={"/src/assets/1.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/src/assets/2.png" />
+          <img src={"/src/assets/2.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/src/assets/3.png" />
+          <img src={"/src/assets/3.png"} />
         </SwiperSlide>
       </Swiper>
       <footer>
