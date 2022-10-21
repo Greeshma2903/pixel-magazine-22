@@ -10,6 +10,7 @@ import "swiper/css/lazy";
 
 // import required modules
 import { Lazy, Navigation, Pagination, Keyboard } from "swiper";
+import Loader from "./Loader";
 
 export default function App() {
   const pagination = {
@@ -21,6 +22,7 @@ export default function App() {
 
   return (
     <>
+      <Loader/>
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -47,13 +49,21 @@ export default function App() {
       >
         <SwiperSlide>
           <img
-            src={"/cover.webp"}
+            src={"https://i.imgur.com/IK40qJW.jpeg"}
             className="swiper-lazy"
             alt="Cover page of magazine"
           />
           <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </SwiperSlide>
-        {Array.from(Array(25).keys(), (n) => n + 1).map((count) => {
+        <SwiperSlide>
+          <img
+            src={"https://i.imgur.com/yM2qBTh.jpeg"}
+            className="swiper-lazy"
+            alt="Cover page of magazine"
+          />
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </SwiperSlide>
+        {Array.from(Array(56).keys(), (n) => n + 1).map((count) => {
           return (
             <SwiperSlide>
               <img src={`/${count}.webp`} className="swiper-lazy" alt=" " />
