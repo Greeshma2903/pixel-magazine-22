@@ -9,9 +9,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/lazy";
 
 // import required modules
-import { Navigation, Pagination, Keyboard } from "swiper";
+import {Lazy, Navigation, Pagination, Keyboard } from "swiper";
 
 export default function App() {
   const pagination = {
@@ -43,23 +44,29 @@ export default function App() {
         keyboard={{
           enabled: true,
         }}
-        modules={[Navigation, Pagination, Keyboard]}
+        lazy={true}
+        modules={[Lazy, Navigation, Pagination, Keyboard]}
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={"/cover.png"} />
+          <img src={"/cover.png"} className="swiper-lazy" alt="Cover page of magazine"/>
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={"/contents.png"} />
+          <img src={"/contents.png"} className="swiper-lazy" alt="Table of Contents"/>
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={"/1.png"} />
+          <img src={"/1.png"} className="swiper-lazy" alt=" "/>
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={"/2.png"} />
+          <img src={"/2.png"} className="swiper-lazy" alt=" "/>
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={"/3.png"} />
+          <img src={"/3.png"} className="swiper-lazy" alt=" "/>
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </SwiperSlide>
       </Swiper>
       <footer>
