@@ -1,6 +1,4 @@
-#app {
-  height: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 html,
 body {
   position: relative;
@@ -9,15 +7,26 @@ body {
 
 body {
   background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', Helvetica, sans-serif;
   font-size: 14px;
   color: #000;
+  background: #111;
   margin: 0;
   padding: 0;
 }
 
-body {
-  background: #000;
+footer {
+  color: rgb(194, 194, 194);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 0 5px;
+  color: violet;
 }
 
 .swiper {

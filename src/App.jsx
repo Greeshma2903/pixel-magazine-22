@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import { Zoom, Navigation, Pagination } from "swiper";
+import { Zoom, Navigation, Pagination, Keyboard } from "swiper";
 
 export default function App() {
   const pagination = {
@@ -29,7 +29,11 @@ export default function App() {
         zoom={true}
         navigation={true}
         pagination={pagination}
-        modules={[Zoom, Navigation, Pagination]}
+        grabCursor={true}
+        keyboard={{
+          enabled: true,
+        }}
+        modules={[Zoom, Navigation, Pagination, Keyboard]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -58,6 +62,10 @@ export default function App() {
           </div>
         </SwiperSlide>
       </Swiper>
+      <footer>
+        made with 🤟 by 
+        <a href="https://github.com/greeshma2903">greeshma </a>
+      </footer>
     </>
   );
 }
