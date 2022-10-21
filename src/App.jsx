@@ -1,9 +1,9 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import Cover from '/src/assets/cover.png'
-import Contents from '/src/assets/contents.png'
-import img1 from '/src/assets/1.png'
+// import Cover from '/src/assets/cover.png'
+// import Contents from '/src/assets/contents.png'
+// import img1 from '/src/assets/1.png'
 
 // Import Swiper styles
 import "swiper/css";
@@ -47,19 +47,19 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={Cover} />
+          <img src={"/cover.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Contents} />
+          <img src={"/contents.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img1} />
+          <img src={"/1.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={"/src/assets/2.png"} />
+          <img src={"/2.png"} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={"/src/assets/3.png"} />
+          <img src={"/3.png"} />
         </SwiperSlide>
       </Swiper>
       <footer>
