@@ -7,22 +7,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/lazy";
+import "swiper/css/scrollbar";
 
 // import required modules
-import { Lazy, Navigation, Pagination, Keyboard } from "swiper";
+import { Lazy, Navigation, Pagination, Keyboard, Scrollbar } from "swiper";
 import Loader from "./Loader";
 
 export default function App() {
   const pagination = {
     clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
+    // renderBullet: function (index, className) {
+    //   return '<span class="' + className + '">' + (index + 1) + "</span>";
+    type: "fraction",
+    // },
   };
 
   return (
     <>
-      <Loader/>
+      <Loader />
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -39,12 +41,17 @@ export default function App() {
         }}
         navigation={true}
         pagination={pagination}
-        grabCursor={true}
         keyboard={{
           enabled: true,
         }}
+        scrollbar={{
+          draggable: true,
+          hide: true,
+          dragSize: 40,
+          snapOnRelease: true,
+        }}
         lazy={true}
-        modules={[Lazy, Navigation, Pagination, Keyboard]}
+        modules={[Lazy, Navigation, Pagination, Keyboard, Scrollbar]}
         className="mySwiper"
       >
         <SwiperSlide>

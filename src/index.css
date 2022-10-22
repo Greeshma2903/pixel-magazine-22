@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap");
+
 html,
 body {
   position: relative;
@@ -14,6 +16,14 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
 }
 
 footer {
@@ -43,6 +53,7 @@ footer a {
   position: relative;
   transition: transform 100ms;
 }
+
 @media only screen and (min-width: 769px) {
   .swiper-slide.swiper-slide-active:first-child {
     display: flex;
@@ -71,18 +82,22 @@ footer a {
 }
 
 /* navigation */
-.swiper-pagination-bullet {
-  width: 20px !important;
-  height: 20px !important;
-  text-align: center;
-  font-size: 12px;
-  color: #fff !important;
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+.swiper-pagination span {
+  background: rgba(175, 175, 175, 0.5);
+  color: rgb(37, 37, 37);
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 5px;
 }
 
-.swiper-pagination-bullet-active {
-  color: #222 !important;
+/* scrollbar */
+.swiper-scrollbar {
+  background-color: rgba(199, 199, 199, 0.474) !important;
+  bottom: 0px !important;
+}
+
+.swiper-scrollbar-drag {
+  background: rgb(0, 203, 200) !important;
 }
 
 /* loader */
@@ -99,6 +114,11 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 2rem;
 }
 
 .loader-div.hide {
@@ -114,8 +134,8 @@ body.hide {
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  background-color: #273ae8;
   margin: 35px 5px;
+  background-color: #eeec82;
 }
 
 #loader-2 span:nth-child(1) {
