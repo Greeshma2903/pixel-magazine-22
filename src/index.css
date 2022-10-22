@@ -121,6 +121,17 @@ footer a {
   font-size: 2rem;
 }
 
+.loader-div h1{
+  margin: 0;
+}
+
+.loader-div p {
+  margin: 4rem 0;
+  font-size: 0.8rem;
+  color:violet;
+  font-family: 'Inter', sans-serif;
+}
+
 .loader-div.hide {
   display: none;
 }
@@ -135,7 +146,7 @@ body.hide {
   height: 10px;
   border-radius: 100%;
   margin: 35px 5px;
-  background-color: #eeec82;
+  background-color: #fad13e;
 }
 
 #loader-2 span:nth-child(1) {

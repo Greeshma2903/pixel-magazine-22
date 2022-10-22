@@ -8,9 +8,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/lazy";
 import "swiper/css/scrollbar";
+import "swiper/css/a11y";
 
 // import required modules
-import { Lazy, Navigation, Pagination, Keyboard, Scrollbar } from "swiper";
+import { A11y, Lazy, Navigation, Pagination, Keyboard, Scrollbar } from "swiper";
 import Loader from "./Loader";
 
 export default function App() {
@@ -51,7 +52,12 @@ export default function App() {
           snapOnRelease: true,
         }}
         lazy={true}
-        modules={[Lazy, Navigation, Pagination, Keyboard, Scrollbar]}
+        a11y={ {
+          enabled:true,
+          prevSlideMessage: 'Previous slide',
+          nextSlideMessage: 'Next slide',
+        }}
+        modules={[Lazy, Navigation, Pagination, Keyboard, Scrollbar, A11y]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -66,14 +72,14 @@ export default function App() {
           <img
             src={"https://i.imgur.com/yM2qBTh.jpeg"}
             className="swiper-lazy"
-            alt="Cover page of magazine"
+            alt="Table of contents"
           />
           <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </SwiperSlide>
         {Array.from(Array(56).keys(), (n) => n + 1).map((count) => {
           return (
-            <SwiperSlide>
-              <img src={`/${count}.webp`} className="swiper-lazy" alt=" " />
+            <SwiperSlide key={count}>
+              <img src={`/${count}.webp`} className="swiper-lazy" alt="magazine page" />
               <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
             </SwiperSlide>
           );

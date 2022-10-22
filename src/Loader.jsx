@@ -16,6 +16,7 @@ const Loader = () => {
           <span></span>
         </div>
       </div>
+      <p>👉 images may take a few seconds to load 👈</p>
     </div>
   );
 };
