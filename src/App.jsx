@@ -86,7 +86,7 @@ export default function App() {
         })}
       </Swiper>
       <footer>
-        made with 🤟 by
+        site made with 🤟 by
         <a href="https://github.com/greeshma2903">greeshma </a>
       </footer>
     </>
